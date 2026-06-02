@@ -2,7 +2,7 @@
 // vpww-bot.js（完全版）
 // 府県予報区だけを対象にした 1・2・3 レベル判定ロジック
 // ===============================
-
+require("dotenv").config();
 import fs from "fs";
 import fetch from "node-fetch";
 import { XMLParser } from "fast-xml-parser";
@@ -11,7 +11,7 @@ import { Client, GatewayIntentBits } from "discord.js";
 // -------------------------------
 // 設定
 // -------------------------------
-const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
+const DISCORD_TOKEN = process.env.DISCORD_TOKEN;; // ← マスク済み
 const WARNING_CHANNEL_ID = "1432943947789107374";   // 気象警報
 const GENERAL_CHANNEL_ID = "1483610479103443149"; 
 const TORNADO_CHANNEL_ID = "1432944215674982521";
